@@ -72,10 +72,12 @@ a:active {
   /* selected link */
   color: var(--dark-green);
 }
+
 a:hover, a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
  }
+
  .button, button {
    /* overwrites browser defaults and resets the border */
    border: none;
@@ -110,16 +112,19 @@ a:hover, a:focus {
   margin-right: 40px;
   border-radius: 50%;
 }
+
 .page-footer {
   clear: both;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
+
 .profile {
   max-width: 700px;
   margin: 0 auto;
 }
+
 * {
   box-sizing: bored-box;
 }
@@ -128,16 +133,20 @@ a:hover, a:focus {
   width: 100%;
   padding: 20px;
 }
+
 .page-header__item {
   flex: 0 1 200px;
 }
+
 .page-header .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
 }
+
 .navigation-list {
   list-style-type: none;
 }
+
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
@@ -156,6 +165,7 @@ a:hover, a:focus {
   grid-template-columns: 300px 300px 300px;
   grid-template-rows: 300px 300px
 }
+
 .grid__item {
   background-color: lightgray;
 }
@@ -175,41 +185,50 @@ a:hover, a:focus {
   margin: 0;
  }
 }
+
 .grid__item {
   background-color: lightgray;
   width: auto;
   min-height: auto;
   margin: 0;
 }
+
 .grid__item:last-child {
   grid-column: 3 / 3;
   grid-row: 1 / 3;
 }
+
 @media all and (max-width: 750px){
   /* shared code */
 }
+
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
+
 @media all and (max-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
 }
+
 @keyframes color-change {
   0% {
     fill: #edc655;
@@ -221,9 +240,11 @@ a:hover, a:focus {
     fill: #f76414;
   }
 }
+
 .sun {
   animation: 4s color-change infinite alternate linear;
 }
+
 @keyframes cloud-move {
   from {
     transform: translate(0, 50px);
@@ -232,9 +253,11 @@ a:hover, a:focus {
     transform: translate(200px, 50px);
   }
 }
+
 .cloud-front {
   animation: 30s cloud-move infinite alternate linear;
 }
+
 @keyframes cloud-move-reverse {
   from {
     transform: translate(446px; 48px);
@@ -243,6 +266,7 @@ a:hover, a:focus {
     transform: translate(100px, 48px);
   }
 }
+
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
