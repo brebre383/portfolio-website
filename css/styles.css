@@ -49,6 +49,8 @@ a {
 body {
 font-family: 'lato', sans-serif;
 font-weight: var(--font-light);
+font-size: 16px;
+line-height: 2;
 }
 a {
   color: var(--light-grey);
@@ -56,6 +58,7 @@ a {
 
 html {
   background-color: var(--white);
+  -webkit-text-size-adjust: 100%;
 }
 
 a:hover {
@@ -108,8 +111,8 @@ a:hover, a:focus {
 
 .profile__portrait {
   float: left;
-  width: 250px;
-  margin-right: 40px;
+  width: 150px;
+  margin-right: 50px;
   border-radius: 50%;
 }
 
@@ -118,19 +121,53 @@ a:hover, a:focus {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 15%;
+}
+
+.h2-class {
+  max-width:300px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+}
+
+.form {
+  border-width: 2px;
+  text-align: center;
 }
 
 .profile {
-  max-width: 700px;
+  max-width: 500px;
   margin: 0 auto;
+  background-color: lightgray;
+  padding: 50px 0;
+}
+
+.header_1 {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tel {
+background-color: white;
+}
+
+.email {
+  background-color: white;
+}
+
+.contact-message {
+  background-color: white;
 }
 
 * {
   box-sizing: bored-box;
-}
+  background-color: lightgray;
+  }
 .page-header {
   display: flex;
-  width: 100%;
+  width: 90%;
   padding: 20px;
 }
 
@@ -157,7 +194,13 @@ a:hover, a:focus {
 }
 
 .about-navigation {
-  flex: 0 1 200px;
+  flex: 0 1 150px;
+}
+
+.table {
+  border-collapse: separate;
+  text-indent: initial;
+  border-spacing: 20px;
 }
 
 .grid {
