@@ -31,3 +31,35 @@ for (let i = 0; i < pokemonList.length; i++) {
     document.write('</div>');
 }
 document.write('</div>');
+
+// Task 1.5
+pokemonlist.forEach(function (pokemon) {
+  if (pokemon.height < 1.4 && pokemon.height > 1.1) {
+    document.write(pokemon.name + " is small/ ");
+  }
+  else if (pokemon.height < 1.5) {
+    document.write(pokemon.name + " is normal/ ");
+  } else { document.write(pokemon.name + " is big, wow!/"); }
+});
+
+let pokemon1 = 'Ivysaur(Height:1)';
+document.write(pokemon1);
+let pokemon2 = 'Blastoise(height:1.6)';
+document.write(pokemon2);
+let pokemon3 = 'Girafarig(height:1.5)';
+document.write(pokemon3);
+
+
+
+
+function divide(dividend, divisor){
+  if(divisor === 0){
+    return "you're trying to divide by zero."
+  }else{
+    let result = dividend / divisor;
+    return result;
+  }
+}
+
+divide();
+console.log(divide(4, 2));
