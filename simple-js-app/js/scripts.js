@@ -1,3 +1,4 @@
+let pokemonRepository = (function() {
 let pokemonList = [
         {       name: 'Ivysaur',
                 height: 1,
@@ -17,6 +18,20 @@ let pokemonList = [
                 types: ['psychic', 'normal']
         },
 ];
+
+return {
+  add: function(pokemon) {
+    pokemonList.push(pokemon);
+  },
+  getAll: function() {
+    return pokemonList;
+  }
+ };
+})();
+
+console.log(pokemonRepository.getAll());
+pokemonRepository.add({ name: '' });
+console.log(pokemonRepository.getAll());
 
 document.write('<div class="pokemonList">');
 for (let i = 0; i < pokemonList.length; i++) {
@@ -48,6 +63,8 @@ let pokemon2 = 'Blastoise(height:1.6)';
 document.write(pokemon2);
 let pokemon3 = 'Girafarig(height:1.5)';
 document.write(pokemon3);
+
+
 
 
 
