@@ -64,6 +64,7 @@ document.write(pokemon2);
 let pokemon3 = 'Girafarig(height:1.5)';
 document.write(pokemon3);
 
+// 1.6 task
 
 
 
