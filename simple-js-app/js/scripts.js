@@ -1,5 +1,5 @@
-let pokemonRepository = (function() {
-let pokemonList = [
+var pokemonRepository = (function () {
+let repository = [
         {       name: 'Ivysaur',
                 height: 1,
                 weight: 13,
@@ -19,65 +19,111 @@ let pokemonList = [
         },
 ];
 
-return {
-  add: function(pokemon) {
-    pokemonList.push(pokemon);
-  },
-  getAll: function() {
-    return pokemonList;
+function add(pokemon) {
+  if (
+    typeof pokemon === "object" &&
+    "name" in pokemon &&
+    "height" in pokemon &&
+    "types" in pokemon
+  ) {
+    repository.push(pokemon);
+  } else {
+    console.log("pokemon is not correct");
   }
- };
+}
+
+function getAll() {
+  return repository;
+}
+
+function addListItem(pokemon){
+  let pokemonList = document.querySelector(".pokemon-list");
+  let listpokemon = document.createElement("li");
+  let button = document.createElement("button");
+  button.innerText = pokemon.name;
+  button.classList.add("button-class");
+  listpokemon.appendChild(button);
+  pokemonList.appendChild(listpokemon);
+  buttonEventListener(button, pokemon);
+}
+
+function buttonEventListener(button, pokemon) {
+  button.addEventListener("click", function() {
+    showDetails(pokemon);
+  });
+}
+
+return {
+  add: add,
+  getAll: getAll,
+  addListItem: addListItem
+};
 })();
 
 console.log(pokemonRepository.getAll());
-pokemonRepository.add({ name: '' });
+pokemonRepository.add({ name: "Pikachu", height: 0.3,
+types: ["electric"] });
+
+
 console.log(pokemonRepository.getAll());
 
+pokemonRepository.getAll().forEach(function (pokemon) {
+
+  pokemonRepository.addListItem(pokemon);
+});
+
+function showDetails(pokemon) {
+    console.log(pokemon);
+}
+
+function getAll() {
+    return pokemonList;
+  }
+
+//
 document.write('<div class="pokemonList">');
 for (let i = 0; i < pokemonList.length; i++) {
     if (pokemonList[i].height > 1.5) {
-        document.write('<div class="pokemon--big">');
-        document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")");
-        document.write(' - Wow, that\'s big!');
+       document.write('<div class="pokemon--big">');
+       document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")");
+       document.write(' - Wow, that\'s big!');
     } else {
       document.write('<div class="pokemon">');
       document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")");
-    }
+  }
     document.write('</div>');
 }
-document.write('</div>');
+ document.write('</div>');
+
+
 
 // Task 1.5
-pokemonlist.forEach(function (pokemon) {
-  if (pokemon.height < 1.4 && pokemon.height > 1.1) {
-    document.write(pokemon.name + " is small/ ");
-  }
-  else if (pokemon.height < 1.5) {
-    document.write(pokemon.name + " is normal/ ");
-  } else { document.write(pokemon.name + " is big, wow!/"); }
-});
+//pokemonlist.forEach(function (pokemon) {
+  //if (pokemon.height < 1.4 && pokemon.height > 1.1) {
+    //document.write(pokemon.name + " is small/ ");
+  //}
+//   else if (pokemon.height < 1.5) {
+    //document.write(pokemon.name + " is normal/ ");
+//  } else { document.write(pokemon.name + " is big, wow!/"); }
+// });
 
-let pokemon1 = 'Ivysaur(Height:1)';
-document.write(pokemon1);
-let pokemon2 = 'Blastoise(height:1.6)';
-document.write(pokemon2);
-let pokemon3 = 'Girafarig(height:1.5)';
-document.write(pokemon3);
-
-// 1.6 task
+//let pokemon1 = 'Ivysaur(Height:1)';
+//document.write(pokemon1);
+//let pokemon2 = 'Blastoise(height:1.6)';
+//document.write(pokemon2);
+//let pokemon3 = 'Girafarig(height:1.5)';
+//document.write(pokemon3);
 
 
 
+//function divide(dividend, divisor){
+//  if(divisor === 0){
+//    return "you're trying to divide by zero."
+//  }else{
+//    let result = dividend / divisor;
+//    return result;
+//  }
+//}
 
-
-function divide(dividend, divisor){
-  if(divisor === 0){
-    return "you're trying to divide by zero."
-  }else{
-    let result = dividend / divisor;
-    return result;
-  }
-}
-
-divide();
-console.log(divide(4, 2));
+//divide();
+//console.log(divide(4, 2));
