@@ -1,23 +1,4 @@
 let pokemonRepository = (function () {
-//let pokemonList = [
-//        {       name: 'Ivysaur',
-//                height: 1,
-//                weight: 13,
-//                types: ['grass', 'poison']
-//        },
-
-//        {       name: 'Blastoise',
-//                height: 1.6,
-//                weight: 85.5,
-//                types: ['water']
-//        },
-
-//        {       name: 'Girafarig',
-//                height: 1.5,
-//                weight: 41.5,
-//                types: ['psychic', 'normal']
-//        },
-//];
 
 let pokemonList = [];
 
@@ -82,33 +63,20 @@ function loadDetails (item) {
 }
 
 function showModal(pokemon) {
-  modalContainer.innerHTML = '';
+  let modalBody = $(".modal-body");
+  let modalTitle = $("modal-title");
 
-   let modal = document.createElement('div');
-   modal.classList.add('modal');
+  let nameElement = $('<h3>' + pokemon.name + '</h3>');
+  let imageElement = $('<img class="pokemon-img">');
+  imageElement.attr("src", pokemon.imageUrl);
+  let heightElement = $('<p>' + 'Height: ' + pokemon.height + '</p>');
+  let typeElement = $('<p>' + 'Types : ' + pokemon.types + '</p>');
+  let abilitiesElement = $('<p>' + 'Abilities: ' + pokemon.abilities + '</p>');
 
-   let closeButtonElement = document.createElement('button');
-   closeButtonElement.classList.add('modal-close');
-   closeButtonElement.innerText = 'Close';
-   closeButtonElement.addEventListener('click', hideModal);
-
-   let titleElement = document.createElement('h1');
-   titleElement.innerText = pokemon.name.charAt(0).toUppercase() + pokemon.name.slice(1);
-
-   let contentElement = document.createElement('p');
-   contentElement.innerText = Height: ${pokemon.height};
-
-   let imgElement = document.createElement('img');
-   imgElement.classList.add('img-element');
-   imgElement.src = pokemon.imageUrl;
-
-   modal.appendChild(closeButtonElement);
-   modal.appendChild(titleElement);
-   modal.appendChild(imgElement);
-   modal.appendChild(contentElement);
-   modalContainer.appendChild(modal);
-
-   modalContainer.classList.add('is-visible');
+  modalTitle.append(nameElement);
+  modalBody.append(imageElement);
+  modalBody.append(typeElement);
+  modalBody.append(abilitiesElement);
 }
 
 function hideModal() {
