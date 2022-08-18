@@ -30,7 +30,7 @@ body {
   border: #000 200px;
   border-color: #000;
   color: white;
-  padding: 20px 75px;
+  padding: 20px 75px 20px 75px;
   margin: 25px;
   font-family: inherit;
   font-weight: 700;
