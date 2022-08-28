@@ -24,13 +24,13 @@ function getAll() {
 function addListItem(pokemon) {
   let pokemonList = document.querySelector('.list-group-horizontal');
   let listItem = document.createElement('li');
-  pokemonList.classList.add("group-list-item");
+  pokemonList.classList.add('group-list-item');
   pokemonList.classList.add('col-sml-4', 'col-md-6', 'col-lg-12');
   let buttonItem = document.createElement('button');
-  buttonItem.classList.add("pokemonButton");
+  buttonItem.classList.add('pokemonButton');
   buttonItem.innerText = pokemon.name;
-  buttonItem.setAttribute("data-toggle", "modal");
-  buttonItem.setAttribute("data-target", "#pokemon-modal");
+  buttonItem.setAttribute('data-toggle', 'modal');
+  buttonItem.setAttribute('data-target', '#pokemon-modal');
   $(buttonItem).addClass('button-class btn-block btn m1');
   listItem.appendChild(buttonItem);
   pokemonList.appendChild(listItem);
@@ -85,8 +85,8 @@ function loadDetails (item) {
 }
 
 function showModal(pokemon) {
-  let modalBody = $(".modal-body");
-  let modalTitle = $("modal-title");
+  let modalBody = $('.modal-body');
+  let modalTitle = $('modal-title');
 
   modalTitle.empty();
   modalBody.empty();
