@@ -127,9 +127,12 @@ function showModal(pokemon) {
   modalBody.append(abilitiesElement);
 }
 
-function hideModal() {
-  modalContainer.classList.remove('is-visible');
-}
+return {
+  showModal: showModal
+};
+//function hideModal() {
+//  modalContainer.classList.remove('is-visible');
+//}
 
 window.addEventListener('keydown', e => {
   if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
