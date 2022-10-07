@@ -102,14 +102,14 @@ pokemonRepository.loadList().then(function() {
 });
 
 
-
+let modalRepository = (function() {
 function showModal(pokemon) {
   let modalBody = $('.modal-body');
   let modalTitle = $('.modal-title');
 
   modalTitle.empty();
   modalBody.empty();
-
+);
 
   let nameElement = $('<h1>' + pokemon.name + '</h1>');
   let imageElement = $('<img class="pokemon-img" style="width:50%">');
