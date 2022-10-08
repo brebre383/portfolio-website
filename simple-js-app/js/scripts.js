@@ -25,7 +25,7 @@ function addListItem(pokemon) {
   let pokemonList = document.querySelector('.list-group-horizontal');
   let pokemonItem = document.createElement('li');
   pokemonList.classList.add('group-list-item');
-  pokemonList.classList.add('col-sml-4', 'col-md-6', 'col-lg-12');
+  pokemonList.classList.add('col-sm-4', 'col-md-6', 'col-lg-12');
   let buttonItem = document.createElement('button');
   buttonItem.classList.add('pokemonButton');
   buttonItem.innerText = pokemon.name;
@@ -127,15 +127,15 @@ function showModal(pokemon) {
   modalBody.append(abilitiesElement);
 }
 
-return {
-  showModal: showModal
-};
-//function hideModal() {
-//  modalContainer.classList.remove('is-visible');
-//}
+//return {
+//  showModal: showModal
+//};
+function hideModal() {
+  modalContainer.classList.remove('is-visible');
+}
 
 window.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+  if (e.key === 'Escape' && modalContainer.classList.contains('show-modal')) {
     hideModal();
   }
 });
