@@ -65,7 +65,7 @@
   box-shadow: #ff4d48 0 0 0 3px, transparent 0 0 0 0;
 }
 
-.pokemon-modal {
+.pokemon-Modal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +75,6 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 100vw;
   text-align: center;
   box-sizing: border-box;
   background: #fff;
