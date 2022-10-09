@@ -128,14 +128,22 @@
   background-color: var(--bs-modal-bg);
   background-clip: padding-box;
   border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
-  border-radius: var(--bs-modal-border-radius);
+  border-radius: 0.3rem;
   outline: 0;
 }
 
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: var(--bs-modal-padding);
+  padding: 1rem;
+}
+
+*, {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
 }
 
 .modal-header {
@@ -152,7 +160,7 @@
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: var(--bs-modal-margin);
+  margin: 0.5rem;
 }
 
 ul {
