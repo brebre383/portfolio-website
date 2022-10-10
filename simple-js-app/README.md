@@ -2,7 +2,7 @@
 
 ## Description:
 
-This is a [simple web application](https://brebre383.github.io/pokedex-app/) that uses data from a [Pokémon API](https://pokeapi.co/).
+This is a [simple web application](https://brebre383.github.io/simple-js-app/simple-js-app/) that uses data from a [Pokémon API](https://pokeapi.co/).
 
 ## Tech:
 
