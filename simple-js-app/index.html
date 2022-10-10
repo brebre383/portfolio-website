@@ -12,17 +12,13 @@
     <title>Pokedex</title>
   </head>
 
-  <body>
-
-<div>
-  <nav class="navbar navbar-expand-md">
-      <a class="navbar-brand" href="#">POKEDEX <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg"
-      alt="pokeball" width="40px" height="40px"></a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse"
-     data-target="#navbarSupportedContent">
-     <span class="navbar-toggler-icon"></span>
-   </button>
-
+  <body class="modal-open" style="padding-right: 0px;">
+    <div>
+      <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#">POKEDEX <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg"
+        alt="pokeball" width="40px" height="40px"></a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse"
+       data-target="#navbarSupportedContent"></button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
           <li class="nav-item inactive">
@@ -38,22 +34,18 @@
           placeholder="Search Pokedex" aria-label="search">
         </form>
       </div>
+  </nav>
 </div>
 <br>
    <div>
-    <ul class='list-group-horizontal'></ul>
+    <ul class="list-group-horizontal group-list-item col-sm-4 col-md-6 col-lg-12"></ul>
   <!---  <div id='modal'></div> -->
-<div class="pokemon-button modal-open" class="modal-container"></div>
-<div class="modal fade show" class="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModal"
-style="display: block; padding-right: 17px;" aria-modal="true"> ==$
-
-<div class="modal fade" class="pokemon-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade show" id="pokemon-modal" tabindex="-1" role="dialog" aria-modal="true" style="padding-right: 0px; display: block;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h3 class="modal-title">pokemon name</h3>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-        </button>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
 
