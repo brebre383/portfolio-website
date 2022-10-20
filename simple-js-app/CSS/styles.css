@@ -109,16 +109,19 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 15% auto;
-  padding: 20px;
-  width: 80%;
   color: var(--bs-modal-color);
   pointer-events: auto;
   background-color: var(--bs-modal-bg);
   background-clip: padding-box;
   border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
-  border-radius: 0.3rem;
+  border-radius: var(--bs-modal-border-radius);
   outline: 0;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: var(--bs-modal-margin);
 }
 
 .modal-body {
@@ -146,12 +149,6 @@ div {
   border-top-right-radius: var(--bs-modal-inner-border-radius);
 }
 
-.modal-dialog {
-  position: relative;
-  width: auto;
-  margin: 0.5rem;
-}
-
 ul {
   list-style-type: none;
   text-align: center;
@@ -164,4 +161,10 @@ ul {
     justify-content: center;
     align-items: center;
   }
+}
+
+@media (min-width: 576px)
+  .modal {
+  --bs-modal-margin: 1.75rem;
+  --bs-modal-box-shadow: 0 0.5rem 1 rem rgba(0, 0, 0, 0.15);
 }
