@@ -85,28 +85,11 @@ function loadDetails (item) {
   });
 }
 
-return {
-  add: add,
-  getAll: getAll,
-  addListItem: addListItem,
-  loadList: loadList,
-  loadDetails: loadDetails,
-  showDetails: showDetails,
-};
-})();
-
-pokemonRepository.loadList().then(function() {
-  pokemonRepository.getAll().forEach(function(pokemon) {
-  pokemonRepository.addListItem(pokemon);
-  });
-});
-
 function showModal(pokemon) {
-  let modalBody = $('.modal-body');
-  let modalTitle = $('.modal-title');
-
-  modalTitle.empty();
-  modalBody.empty();
+  let modalBody = document.querySelector('.modal-body');
+  let modalTitle = document.querySelector('.modal-title');
+  modalTitle.innerText = '';
+  modalBody.innerHTML = '';
 
   let nameElement = $('<h1>' + pokemon.name + '</h1>');
   let imageElement = $('<img class="pokemon-img" style="width:50%">');
@@ -131,11 +114,21 @@ function hideModal() {
   modalContainer.classList.remove('is-visible');
 }
 
-window.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && modalContainer.classList.contains('show-modal')) {
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
     hideModal();
   }
 });
+
+return {
+  add: add,
+  getAll: getAll,
+  addListItem: addListItem,
+  loadList: loadList,
+  loadDetails: loadDetails,
+  showDetails: showDetails,
+};
+})();
 
 searchField.addEventListener('input', function() {
   let pokelist = document.querySelectorAll('.pokemonButton');
@@ -148,5 +141,11 @@ searchField.addEventListener('input', function() {
     } else {
       pokemon.style.display = 'none';
     }
+  });
+});
+
+pokemonRepository.loadList().then(function() {
+  pokemonRepository.getAll().forEach(function(pokemon) {
+  pokemonRepository.addListItem(pokemon);
   });
 });
